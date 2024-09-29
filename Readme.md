@@ -9,5 +9,5 @@ Commands to build the file
 
 Command to build optimized file
 1)  g++ -c Question1.cpp
-2) 	g++ -g -o debug1 Question1.o
-3) 	g++ -O3 -o optimize1 Question1.o
+2) 	g++ -g -o debug2 Question1.o
+3) 	g++ -O3 -o optimize2 Question1.o
