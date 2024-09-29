@@ -3,6 +3,7 @@
 #include <sstream>
 #include <unordered_map>
 #include <vector>
+#include <cctype>
 #include<bits/stdc++.h> 
 using namespace std;
 
@@ -71,6 +72,14 @@ public:
         }
     }
 };
+bool isStringOnly(const string& str) {
+    for (char c : str) {
+        if (!isalpha(c) && !isspace(c)) {
+            return false;
+        }
+    }
+    return true;
+}
 
 int main() {
     AdminDepartment adminDept;
@@ -83,7 +92,9 @@ int main() {
     cout << "Enter the name of the person to fetch details: ";
     transform(nameToFetch.begin(), nameToFetch.end(), nameToFetch.begin(), ::tolower);
     cin>>nameToFetch;
-    adminDept.fetchPersonDetails(nameToFetch);
-
+    if (isStringOnly(nameToFetch)) 
+        adminDept.fetchPersonDetails(nameToFetch);
+    else   
+        cout<<"Enter Name Corretly";
     return 0;
 }
