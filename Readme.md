@@ -6,11 +6,8 @@ Checks the IIITD_Academic.csv file and gives the Name,Position,Department,Teleph
 
 Commands to build the file
 1)  g++ -c Question2.cpp
-2) 	g++ -g -o debug1 Question2.o
-
-Command to build optimized file
-1)  g++ -c Question2.cpp
 2) 	g++ -g -o debug2 Question2.o
+Command to build optimized file
 3) 	g++ -O3 -o optimize2 Question2.o
 
 # Question3
@@ -18,9 +15,6 @@ Gives the output of an escalation path based on seniority level of positions of 
 
 Commands to build the file
 1)  g++ -c Question3.cpp
-2) 	g++ -g -o debug3_1 Question3.o
-
+2) 	g++ -g -o debug3 Question3.o
 Command to build optimized file
-1)  g++ -c Question3.cpp
-2) 	g++ -g -o debug3_2 Question3.o
-3) 	g++ -O3 -o optimize3_2 Question3.o
+3) 	g++ -O3 -o optimize3 Question3.o
