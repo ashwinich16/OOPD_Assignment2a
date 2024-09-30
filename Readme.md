@@ -18,9 +18,9 @@ Gives the output of an escalation path based on seniority level of positions of 
 
 Commands to build the file
 1)  g++ -c Question3.cpp
-2) 	g++ -g -o debug1 Question3.o
+2) 	g++ -g -o debug3_1 Question3.o
 
 Command to build optimized file
 1)  g++ -c Question3.cpp
-2) 	g++ -g -o debug1 Question3.o
-3) 	g++ -O3 -o optimize1 Question3.o
+2) 	g++ -g -o debug3_2 Question3.o
+3) 	g++ -O3 -o optimize3_2 Question3.o
