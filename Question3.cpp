@@ -101,6 +101,8 @@ public:
             if (person->resolveComplaint()) {
                 cout << "Complaint resolved by " << person->getPosition() << ".\n";
                 return;
+            }else {
+                cout << "Escalating to next level......\n";
             }
         }
         cout << "Complaint could not be resolved at any level.\n";
@@ -145,7 +147,7 @@ void setupAdministrativeEscalation(string department, EscalationMatrix& matrix) 
 
 // Function to set up academic department escalation
 void setupAcademicEscalation(EscalationMatrix& matrix) {
-    cout <<" Departments Escalation Path: \n";
+    cout <<"Departments Escalation Path: \n";
     matrix.addPerson(new Professor());
     matrix.addPerson(new HeadOfDepartment());
     matrix.addPerson(new HeadAdministrativeOfficer());
@@ -155,7 +157,6 @@ int main() {
     EscalationMatrix matrix;
 
     //IRD
-    cout << "Setting up escalation for IRD Department\n";
     setupAdministrativeEscalation("IRD", matrix);
     matrix.escalateComplaint();
 
@@ -163,7 +164,6 @@ int main() {
 
     //Academics
     EscalationMatrix adminMatrix;
-    cout << "Setting up escalation for Academics Department\n";
     setupAdministrativeEscalation("Academics", adminMatrix);
     adminMatrix.escalateComplaint();
 
@@ -171,28 +171,24 @@ int main() {
 
     //Student Affairs
     EscalationMatrix studentAffairsMatrix;
-    cout << "Setting up escalation for Student Affairs Department\n";
     setupAdministrativeEscalation("Student Affairs", studentAffairsMatrix);
     studentAffairsMatrix.escalateComplaint();
 
     cout << "\n";
     //Store And Purchase
     EscalationMatrix storematrix;
-    cout << "Setting up escalation for Store and Purchase Department\n";
-    setupAdministrativeEscalation("Student Affairs", storematrix);
+    setupAdministrativeEscalation("Store and Purchase", storematrix);
     storematrix.escalateComplaint();
     cout << "\n";
 
     //Library
     EscalationMatrix librarymatrix;
-    cout << "Setting up escalation for Library Department\n";
-    setupAdministrativeEscalation("Student Affairs", librarymatrix);
+    setupAdministrativeEscalation("Library", librarymatrix);
     librarymatrix.escalateComplaint();
     cout << "\n";
 
     //Academic departments
     EscalationMatrix academicMatrix;
-    cout << "Setting up escalation for All Academic Departments\n";
     setupAcademicEscalation(academicMatrix);
     academicMatrix.escalateComplaint();
 

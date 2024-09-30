@@ -36,4 +36,7 @@ Command to build optimized file
 1)  g++ -c Question3.cpp
 2) 	g++ -g -o debug3_2 Question3.o
 3) 	g++ -O3 -o optimize3_2 Question3.o
+<<<<<<< HEAD
 
+=======
+>>>>>>> question3
