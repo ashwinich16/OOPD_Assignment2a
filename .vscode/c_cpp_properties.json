@@ -3,7 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include",  // Adjust this path if needed
+                "C:/msys64/usr/include"        // Add this line if you need system headers
             ],
             "defines": [
                 "_DEBUG",
