@@ -9,11 +9,16 @@
 #include <chrono>
 #include <thread>
 #include <iomanip>
-#include "LibraryItem.h"
 
 using namespace std;
+int ID = 1;
+const int MAX_ITEMS = 500; // Maximum number of items in the library
+class LibraryItem
+{
+public:
+    virtual void printDetails() const = 0;
+    virtual ~LibraryItem() {}
+};
 
-int ID = 1; // Definition of ID
 
-// You can implement any member functions of LibraryItem if needed.
-// For example, if you had a derived class you could implement its functions here.
+

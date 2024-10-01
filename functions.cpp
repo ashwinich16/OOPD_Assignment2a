@@ -4,7 +4,6 @@
 #include <cctype> 
 #include "functions.h"
 
-using namespace std;
 bool isNumeric(const string &str)
 {
     for (char c : str)
@@ -74,7 +73,7 @@ bool isValidUserName(const string &userName)
     string token;
 
     for (int i = 0; i <= fieldIndex; i++) {
-        if (!getline(ss, token, ',')) {
+        if (!std::getline(ss, token, ',')) {
             break;  // Handle incomplete lines
         }
 

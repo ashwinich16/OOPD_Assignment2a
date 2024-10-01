@@ -4,8 +4,6 @@
 #include <thread>
 #include"Library.h"
 
-using namespace std;
-
 void Library ::searchBooksByAuthor(const string &bookAuthor, Book *matchingBooks[], int &matchingCount)
 {
     matchingCount = 0;

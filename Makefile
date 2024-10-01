@@ -1,8 +1,11 @@
 # Makefile for compiling the program
 
 # Default target
-all: main.o Library.o LibraryItem.o PublicationRank.o User.o Book.o functions.o Journals.o
-	g++ main.o Library.o LibraryItem.o PublicationRank.o User.o Book.o functions.o Journals.o -o my_program -pthread
+all: my_program
+
+# Linking all object files into the final executable
+my_program: main.o Library.o LibraryItem.o PublicationRank.o User.o Book.o classfunctions.o functions.o Journals.o
+	g++ main.o Library.o LibraryItem.o PublicationRank.o User.o Book.o classfunctions.o functions.o Journals.o -o my_program
 
 # Object file targets
 main.o: main.cpp
@@ -28,6 +31,10 @@ functions.o: functions.cpp
 
 Journals.o: Journals.cpp
 	g++ -c Journals.cpp
+
+classfunctions.o: classfunctions.cpp
+	g++ -c classfunctions.cpp
+
 
 # Clean target
 clean:
