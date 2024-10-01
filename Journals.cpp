@@ -3,29 +3,24 @@
 
 using namespace std;
 
-class Journals : public LibraryItem
+// Implement the constructor and methods declared in Journals.h
+
+Journals::Journals(int ID, const string &title)
+    : ID(ID), title(title)
 {
-private:
-    int ID;
-    string title;
+}
 
-public:
-    // Constructor
-    Journals(int ID, const string &title)
-        : ID(ID), title(title)
-    {
-    }
-    int getID() const
-    {
-        return ID;
-    }
-    string getTitle() const
-    {
-        return title;
-    }
-    void printDetails() const override
-    {
-        cout << "ID: " << ID << "\nJournal Title: " << title << "\n";
-    }
-};
+int Journals::getID()
+{
+    return ID;
+}
 
+string Journals::getTitle() const
+{
+    return title;
+}
+
+void Journals::printDetails() const
+{
+    cout << "ID: " << ID << "\nJournal Title: " << title << "\n";
+}

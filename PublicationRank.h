@@ -20,7 +20,7 @@ public:
     // Getter methods
     int getID() const;
     std::string getPublication() const;
-    int getRank() const;
+    int getRank() const; // Corrected function name to getRank()
     double getTotalPaid() const;
     bool isBorrowed() const;
 

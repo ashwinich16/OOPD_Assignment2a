@@ -12,18 +12,8 @@
 #include "LibraryItem.h"
 
 using namespace std;
-int ID = 1;
-const int MAX_ITEMS = 500; // Maximum number of items in the library
 
+int ID = 1; // Definition of ID
 
-
-class LibraryItem
-{
-public:
-    virtual void printDetails() const = 0;
-    virtual ~LibraryItem() {}
-};
-
-
-
-
+// You can implement any member functions of LibraryItem if needed.
+// For example, if you had a derived class you could implement its functions here.
